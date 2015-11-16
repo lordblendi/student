@@ -6,7 +6,7 @@ var MainPage = MainPage || {};
 m.route.mode = 'hash';
 
 //set routing lists with components
-m.route(document.body, '/', {
+m.route(document.getElementById("mainpage"), '/', {
     '/': MainPage,
 });
 
