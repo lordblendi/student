@@ -3,5 +3,6 @@
 var MainPage = MainPage || {};
 
 MainPage.controller = function () {
-    return {};
+
+    MainPage.WelcomeMessage = "Hello World!"
 };
