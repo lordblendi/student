@@ -4,5 +4,9 @@ var MainPage = MainPage || {};
 
 MainPage.controller = function () {
 
-    MainPage.WelcomeMessage = "Hello World!"
+    MainPage.setWelcomeMessage("Hello World!");
+};
+
+MainPage.setWelcomeMessage = function(string){
+    MainPage.WelcomeMessage = string;
 };

@@ -31,14 +31,8 @@ gulp.task('msx', function () {
         .on('error', function (e) {
             console.error(e.message + '\n  in ' + e.fileName)
         })
-        .pipe(gulp.dest('./temp/'));
-});
-
-gulp.task('scripts', function () {
-    gulp.start('msx');
-
-    gulp.src('./temp/**/*.js')
         .pipe(concat('index.js'))
+        .pipe(uglify())
         .pipe(gulp.dest('./dist/'));
 });
 
@@ -62,7 +56,7 @@ gulp.task('css', function () {
 
 
 gulp.task('browserify', function () {
-    gulp.start('scripts').start('html').start('css');
+    gulp.start('msx').start('html').start('css');
 
 });
 

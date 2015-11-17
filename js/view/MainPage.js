@@ -8,7 +8,7 @@ MainPage.view = function () {
    //     m("h1", MainPage.WelcomeMessage)
    // ]);
 
-    return    <div>
+    return    <div class="page-header">
         <h1>{MainPage.WelcomeMessage}</h1>
     </div>
 };
