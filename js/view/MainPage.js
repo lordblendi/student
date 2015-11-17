@@ -4,9 +4,11 @@ var MainPage = MainPage || {};
 
 
 MainPage.view = function () {
-    return
-    <div class="page-header">
-        <h1>MainPage.WelcomeMessage</h1>
-    </div>
+   //return m("div[class=page-header]", [
+   //     m("h1", MainPage.WelcomeMessage)
+   // ]);
 
+    return    <div>
+        <h1>{MainPage.WelcomeMessage}</h1>
+    </div>
 };
