@@ -8,6 +8,8 @@ SettingsPanel.view = function () {
         <div class="panel-heading">
             <h1 class="panel-title">Beallitasok</h1>
         </div>
-        <Settings/>
+        <div class="panel-body">
+            <Settings/>
+        </div>
     </div>
 };

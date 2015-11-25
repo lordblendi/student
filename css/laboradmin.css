@@ -21,7 +21,7 @@ body {
 #laboratory, #settings {
     background-color: #ffffff;
     margin: 0 auto;
-    width: 85%;
+    width: 75%;
 }
 
 #menu {
@@ -96,4 +96,35 @@ td {
 
 .navbar-default .navbar-brand, .navbar-default:hover .navbar-brand {
     color: #ffffff;
+}
+
+.commits{
+    display: inline-block;
+}
+
+.ssh{
+    width: 75%;
+    /*display: block;*/
+    /*white-space: normal;*/
+    /*height: 500px;*/
+    resize: none;
+    /*line-height: normal;*/
+    /*vertical-align: middle;*/
+}
+
+.basic-input{
+    width: 51%;
+}
+
+.checkbox-border.input-group-addon:last-child{
+    /*border-right: 1px;*/
+    border-left: 1px solid rgb(204,204,204);
+}
+
+.checkbox-border.input-group-addon:first-child{
+    width: 40px;
+}
+
+.settings-label-size{
+    width: 100px;
 }

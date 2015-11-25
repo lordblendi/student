@@ -10,6 +10,8 @@ m.route.mode = 'hash';
 m.route(document.getElementById("mainpage"), '/', {
     '/': LaboratoryPage,
     '/settings': SettingsPage,
+    //'/settings': LaboratoryPage,
+    //'/': SettingsPage,
 });
 
 m.route("/");

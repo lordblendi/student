@@ -28,7 +28,7 @@ DuringLaboratoryTab.view = function () {
             </tr>
             <tr>
                 <td class="td-middle" colspan="2">
-                    <button type="button" class="btn btn-default"> Mentes button</button>
+                    <button type="button" class="btn btn-default"> Mentes</button>
                 </td>
             </tr>
         </table>
