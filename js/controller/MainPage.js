@@ -7,6 +7,11 @@ MainPage.controller = function () {
     MainPage.setWelcomeMessage("Hello World!");
 };
 
-MainPage.setWelcomeMessage = function(string){
-    MainPage.WelcomeMessage = string;
+MainPage.setWelcomeMessage = function(msg){
+    MainPage.WelcomeMessage = msg;
 };
+
+MainPage.setLaboratoryDuring = function(){
+
+};
+
