@@ -1,13 +1,15 @@
 'use strict';
 
-var MainPage = MainPage || {};
+var LaboratoryPage = LaboratoryPage || {};
+var SettingsPage = SettingsPage || {};
 
 //set routing to hash mode
 m.route.mode = 'hash';
 
 //set routing lists with components
 m.route(document.getElementById("mainpage"), '/', {
-    '/': MainPage,
+    '/': LaboratoryPage,
+    '/settings': SettingsPage,
 });
 
 m.route("/");

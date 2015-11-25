@@ -54,6 +54,11 @@ gulp.task('css', function () {
         .pipe(gulp.dest('./dist/'))
 });
 
+gulp.task('move-resources', function(){
+    gulp.src('./resources/*.json')
+        .pipe(gulp.dest('./dist/'))
+});
+
 
 gulp.task('browserify', function () {
     gulp.start('msx').start('html').start('css');

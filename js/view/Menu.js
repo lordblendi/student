@@ -10,8 +10,8 @@ Menu.view = function () {
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
-                <button type="button" class="btn btn-default navbar-btn">Labor</button>
-                <button type="button" class="btn btn-default navbar-btn">Beállítások</button>
+                <button type="button" class="btn btn-default navbar-btn" onclick={Menu.laborOnClick} >Labor</button>
+                <button type="button" class="btn btn-default navbar-btn" onclick={Menu.settingsOnClick}>Beallitasok</button>
             </ul>
         </div>
     </nav>
