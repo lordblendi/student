@@ -128,3 +128,24 @@ td {
 .settings-label-size{
     width: 100px;
 }
+
+
+.table-results{
+    width: auto;
+    border: 1px solid lightgray;
+    border-collapse: collapse;
+    border-radius: 3px;
+}
+
+.table-results td {
+    border: 1px solid lightgray;
+    border-collapse: collapse;
+}
+
+.table-results .td-bold{
+    text-align: right;
+}
+
+/*.tr-results{*/
+    /*width: auto;*/
+/*}*/

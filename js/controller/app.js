@@ -2,6 +2,7 @@
 
 var LaboratoryPage = LaboratoryPage || {};
 var SettingsPage = SettingsPage || {};
+var ResultsPage = ResultsPage || {};
 
 //set routing to hash mode
 m.route.mode = 'hash';
@@ -10,8 +11,7 @@ m.route.mode = 'hash';
 m.route(document.getElementById("mainpage"), '/', {
     '/': LaboratoryPage,
     '/settings': SettingsPage,
-    //'/settings': LaboratoryPage,
-    //'/': SettingsPage,
+    '/results': ResultsPage,
 });
 
 m.route("/");

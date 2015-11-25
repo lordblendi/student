@@ -9,3 +9,7 @@ Menu.settingsOnClick = function(){
 Menu.laborOnClick = function(){
     m.route("/");
 };
+
+Menu.resultsOnClick = function(){
+    m.route("/results");
+};
