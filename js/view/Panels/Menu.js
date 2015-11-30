@@ -6,7 +6,7 @@ var Menu = Menu || {};
 Menu.view = function () {
     return    <nav id="menu" class="navbar navbar-default navbar-static-top">
         <div class="navbar-header">
-            <div class="navbar-brand">Laboradmin Logo</div>
+            <div class="navbar-brand logo">laboradmin</div>
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
