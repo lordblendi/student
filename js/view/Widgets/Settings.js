@@ -12,21 +12,21 @@ Settings.view = function () {
             </td>
         </tr>
         <tr>
-            <td class="td-right td-bold">regi jelszo</td>
+            <td class="td-right td-bold">régi jelszó</td>
             <td class="td-left">
-                <input type="text" class="form-control basic-input" placeholder="regi jelszo"/>
+                <input type="text" class="form-control basic-input" placeholder="régi jelszó"/>
             </td>
         </tr>
         <tr>
-            <td class="td-right td-bold">uj jelszo</td>
+            <td class="td-right td-bold">új jelszó</td>
             <td class="td-left">
-                <input type="text" class="form-control basic-input" placeholder="uj jelszo"/>
+                <input type="text" class="form-control basic-input" placeholder="új jelszó"/>
             </td>
         </tr>
         <tr>
-            <td class="td-right td-bold">uj jelszo ujra</td>
+            <td class="td-right td-bold">új jelszó újra</td>
             <td class="td-left">
-                <input type="text" class="form-control basic-input" placeholder="uj jelszo ujra"/>
+                <input type="text" class="form-control basic-input" placeholder="új jelszó újra"/>
             </td>
         </tr>
         <tr>
@@ -36,18 +36,18 @@ Settings.view = function () {
                     <span class="input-group-addon checkbox-border">
                         <input type="checkbox"/>
                     </span>
-                    <span class="input-group-addon checkbox-border settings-label-size">Levlistara valo feliratkozas</span>
+                    <span class="input-group-addon checkbox-border settings-label-size">Levlistára való feliratkozás</span>
                 </div>
             </td>
         </tr>
         <tr>
-            <td class="td-right td-bold">ertesitesek</td>
+            <td class="td-right td-bold">értesítések</td>
             <td class="td-left">
                 <div class="input-group">
                     <span class="input-group-addon checkbox-border">
                         <input type="checkbox"/>
                     </span>
-                    <span class="input-group-addon checkbox-border settings-label-size">E-mail ertesiteskre valo feliratkozas</span>
+                    <span class="input-group-addon checkbox-border settings-label-size">E-mail értesítéskre való feliratkozás</span>
                 </div>
             </td>
         </tr>
@@ -59,7 +59,7 @@ Settings.view = function () {
         </tr>
         <tr>
             <td class="td-middle" colspan="2">
-                <button type="button" class="btn btn-default"> Mentes</button>
+                <button type="button" class="btn btn-default"> Mentés</button>
             </td>
         </tr>
     </table>

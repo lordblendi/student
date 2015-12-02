@@ -3,7 +3,7 @@
 var LaboratoryPage = LaboratoryPage || {};
 var SettingsPage = SettingsPage || {};
 var ResultsPage = ResultsPage || {};
-
+var student = new Student();
 //set routing to hash mode
 m.route.mode = 'hash';
 

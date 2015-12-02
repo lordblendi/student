@@ -14,7 +14,7 @@ Results.view = function () {
             <td class="td-bold">5</td>
         </tr>
         <tr>
-            <td class="td-bold">Beugro</td>
+            <td class="td-bold">Beugró</td>
             <td>1</td>
             <td>2</td>
             <td>3</td>
@@ -22,7 +22,7 @@ Results.view = function () {
             <td>5</td>
         </tr>
         <tr>
-            <td class="td-bold">Jegyzokonyv</td>
+            <td class="td-bold">Jegyzőkönyv</td>
             <td>1</td>
             <td>2</td>
             <td>3</td>

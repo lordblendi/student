@@ -1,4 +1,5 @@
 html {
+    min-width: 768px;
     background-color: #f9f9fa;
 }
 
@@ -35,6 +36,10 @@ body {
 
 .navbar-btn {
     margin-right: 5px;
+}
+
+.navbar-default .navbar-text{
+    color: #ffffff;
 }
 
 table {

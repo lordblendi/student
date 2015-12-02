@@ -6,10 +6,10 @@ var CommitDropdown = CommitDropdown || {};
 CommitDropdown.view = function () {
     return <div class="dropdown commits">
         <select class="form-control" aria-labelledby="dropdownMenu1">
-            <option>Commit1</option>
-            <option>Commit2</option>
-            <option>Commit3</option>
-            <option>Commit4</option>
+            <option>Branch1/Commit1</option>
+            <option>Master/Commit2</option>
+            <option>Branch2/Commit3</option>
+            <option>Branch2/Commit4</option>
         </select>
     </div>
 

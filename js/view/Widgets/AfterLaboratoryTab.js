@@ -7,12 +7,12 @@ AfterLaboratoryTab.view = function () {
     return <div role="tabpanel" class="tab-pane" id="after">
         <table>
             <tr>
-                <td class="td-right td-bold">beugro</td>
+                <td class="td-right td-bold">beugró</td>
                 <td class="td-left">5</td>
             </tr>
             <tr>
-                <td class="td-right td-bold">jegyzokonyv</td>
-                <td class="td-left">5 (Nori)</td>
+                <td class="td-right td-bold">jegyzőkönyv</td>
+                <td class="td-left">5 (Teszt oktató 2)</td>
             </tr>
             <tr>
                 <td class="td-middle" colspan="2">
@@ -29,7 +29,7 @@ AfterLaboratoryTab.view = function () {
             </tr>
             <tr>
                 <td class="td-right td-bold">labor</td>
-                <td class="td-left">5 (Gajdi)</td>
+                <td class="td-left">5 (Teszt oktató 1)</td>
             </tr>
             <tr>
                 <td class="td-middle" colspan="2">
