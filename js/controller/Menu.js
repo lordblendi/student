@@ -3,7 +3,7 @@
 var Menu = Menu || {};
 
 Menu.settingsOnClick = function(){
-    m.route("/settings");
+    student.refreshSettings(m.route("/settings"));
 };
 
 Menu.laborOnClick = function(){
@@ -13,3 +13,8 @@ Menu.laborOnClick = function(){
 Menu.resultsOnClick = function(){
     m.route("/results");
 };
+
+Menu.redirectTo = function(route){
+    m.route(route);
+};
+

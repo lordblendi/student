@@ -1,23 +1,22 @@
 function Student() {
+    var self = this;
     this.name = "Name";
     this.neptun = "NEPTUN";
     this.settings = {
-        email: "teszt@teszt.hu",
-        mailingList: true,
+        email: "",
+        mailingList: false,
         notification: false,
-        sshPublicKey: "SSH KULCS"
+        sshPublicKey: ""
     };
+
     this.setSettings = function (newSettings) {
         console.log(newSettings);
-        console.log(newSettings.email);
-        //this.settings.email = newSettings.email;
-        //this.settings.mailingList = newSettings["mailingList"] == "true";
-        //this.settings.notification = newSettings["notification"] == "true";
-        //this.settings.sshPublicKey = newSettings["sshPublicKey"];
+        self.settings.email = newSettings.email;
+        self.settings.mailingList = newSettings.mailingList == "true";
+        self.settings.notification = newSettings.notification == "true";
+        self.settings.sshPublicKey = newSettings.sshPublicKey;
     };
-    this.haho = function(){
-        console.log(this.settings);
-        console.log(this.settings.email);
-        console.log(this.settings[email]);
+    this.refreshSettings = function (routing) {
+        get("http://localhost:3000/student/1/settings", this.setSettings, routing);
     };
 }
