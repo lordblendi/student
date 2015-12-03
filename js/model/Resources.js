@@ -1,12 +1,18 @@
 function Resources() {
-    var json = "";
+    var self = this;
+    this.json = "";
+
 
     this.getResource = function (key) {
-        return this.json[key];
+        return self.json[key];
     };
 
-    this.downloadResources = function () {
-        this.json = get("resources-hu.json");
-        console.log(this.json);
+    this.setResources = function (newResources) {
+        self.json = newResources;
     };
+
+    this.getResources = function (routing) {
+        get("http://localhost/laboradmin/dist/resources/resources-hu.json", this.setResources, routing);
+    };
+
 };

@@ -56,12 +56,12 @@ gulp.task('css', function () {
 
 gulp.task('move-resources', function(){
     gulp.src('./resources/*.json')
-        .pipe(gulp.dest('./dist/'))
+        .pipe(gulp.dest('./dist/resources/'))
 });
 
 
 gulp.task('browserify', function () {
-    gulp.start('msx').start('html').start('css');
+    gulp.start('msx').start('html').start('css').start('move-resources');
 
 });
 

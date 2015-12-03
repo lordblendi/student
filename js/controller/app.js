@@ -4,6 +4,9 @@ var LaboratoryPage = LaboratoryPage || {};
 var SettingsPage = SettingsPage || {};
 var ResultsPage = ResultsPage || {};
 var student = new Student();
+var resources = new Resources();
+
+
 //set routing to hash mode
 m.route.mode = 'hash';
 
@@ -14,4 +17,4 @@ m.route(document.getElementById("mainpage"), '/', {
     '/results': ResultsPage,
 });
 
-m.route("/");
+resources.getResources(m.route("/"));
