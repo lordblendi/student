@@ -10,15 +10,11 @@ Settings.controller = function () {
     this.mailingList = m.prop('');
     this.notification = m.prop('');
 
-    this.refreshSettingsData = function () {
-        self.SshPublicKey(student.settings.sshPublicKey);
-        self.email(student.settings.email);
-        self.mailingList(student.settings.mailingList);
-        self.notification(student.settings.notification);
-    };
+    this.SshPublicKey(student.settings.sshPublicKey);
+    this.email(student.settings.email);
+    this.mailingList(student.settings.mailingList);
+    this.notification(student.settings.notification);
 
-
-    this.refreshSettingsData();
 
     this.saveSettings = function () {
         var mail = "false";

@@ -88,6 +88,19 @@ td {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+
+}
+
+a .td-review {
+    margin: 0 auto;
+    width: 400px;
+    max-width : 400px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #FFFFFF;
+    text-decoration: none;
+
 }
 
 .lab-tabs {
@@ -151,6 +164,6 @@ td {
     text-align: right;
 }
 
-/*.tr-results{*/
-    /*width: auto;*/
-/*}*/
+.popover {
+    max-width: 600px;
+}

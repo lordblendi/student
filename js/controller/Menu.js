@@ -2,19 +2,28 @@
 
 var Menu = Menu || {};
 
-Menu.settingsOnClick = function(){
-    student.refreshSettings(m.route("/settings"));
+Menu.controller = function () {
+    var self = this;
+    this.displayname = student.getDisplayName();
+
+
+    this.settingsOnClick = function(){
+        student.refreshSettings(m.route(resources.urls.settings));
+    };
+
+    this.laborOnClick = function(){
+        student.refreshLaboratory(m.route(resources.urls.laboratory));
+    };
+
+    this.resultsOnClick = function(){
+        m.route(resources.urls.results);
+    };
+
+    this.redirectTo = function(route){
+        m.route(route);
+    };
 };
 
-Menu.laborOnClick = function(){
-    m.route("/");
-};
 
-Menu.resultsOnClick = function(){
-    m.route("/results");
-};
 
-Menu.redirectTo = function(route){
-    m.route(route);
-};
 

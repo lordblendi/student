@@ -6,32 +6,36 @@ var Settings = Settings || {};
 Settings.view = function (ctrl) {
     return <table>
         <tr>
-            <td class="td-right td-bold">e-mail</td>
+            <td class="td-right td-bold">{resources.getResource("settings-label-email")}</td>
             <td class="td-left">
-                <input id="input_email" type="text" class="form-control basic-input" placeholder="e-mail"
+                <input id="input_email" type="text" class="form-control basic-input"
+                       placeholder={resources.getResource("settings-label-email")}
                        value={ctrl.email()} onchange={m.withAttr("value", ctrl.email)}/>
             </td>
         </tr>
         <tr>
-            <td class="td-right td-bold">régi jelszó</td>
+            <td class="td-right td-bold">{resources.getResource("settings-label-oldpwd")}</td>
             <td class="td-left">
-                <input type="text" class="form-control basic-input" placeholder="régi jelszó"/>
+                <input type="text" class="form-control basic-input"
+                       placeholder={resources.getResource("settings-label-oldpwd")}/>
             </td>
         </tr>
         <tr>
-            <td class="td-right td-bold">új jelszó</td>
+            <td class="td-right td-bold">{resources.getResource("settings-label-newpwd")}</td>
             <td class="td-left">
-                <input type="text" class="form-control basic-input" placeholder="új jelszó"/>
+                <input type="text" class="form-control basic-input"
+                       placeholder={resources.getResource("settings-label-newpwd")}/>
             </td>
         </tr>
         <tr>
-            <td class="td-right td-bold">új jelszó újra</td>
+            <td class="td-right td-bold">{resources.getResource("settings-label-newpwdagain")}</td>
             <td class="td-left">
-                <input type="text" class="form-control basic-input" placeholder="új jelszó újra"/>
+                <input type="text" class="form-control basic-input"
+                       placeholder={resources.getResource("settings-label-newpwdagain")}/>
             </td>
         </tr>
         <tr>
-            <td class="td-right td-bold">levlista</td>
+            <td class="td-right td-bold">{resources.getResource("settings-label-mailinglist")}</td>
             <td class="td-left">
                 <div class="input-group">
                     <span class="input-group-addon checkbox-border">
@@ -44,7 +48,7 @@ Settings.view = function (ctrl) {
             </td>
         </tr>
         <tr>
-            <td class="td-right td-bold">értesítések</td>
+            <td class="td-right td-bold">{resources.getResource("settings-label-notification")}</td>
             <td class="td-left">
                 <div class="input-group">
                     <span class="input-group-addon checkbox-border">
@@ -56,16 +60,17 @@ Settings.view = function (ctrl) {
             </td>
         </tr>
         <tr>
-            <td class="td-right td-bold">ssh publikus kulcs</td>
+            <td class="td-right td-bold">{resources.getResource("settings-label-ssh")}</td>
             <td class="td-left">
-                <textarea class="form-control ssh" rows="6" placeholder="ssh publikus kulcs">
+                <textarea class="form-control ssh" rows="6" placeholder={resources.getResource("settings-label-ssh")}>
                     {ctrl.SshPublicKey()}
                 </textarea>
             </td>
         </tr>
         <tr>
             <td class="td-middle" colspan="2">
-                <button type="button" class="btn btn-default" onclick={ctrl.saveSettings}> Mentés</button>
+                <button type="button" class="btn btn-default"
+                        onclick={ctrl.saveSettings}> {resources.getResource("settings-label-save")}</button>
             </td>
         </tr>
     </table>

@@ -17,4 +17,16 @@ m.route(document.getElementById("mainpage"), '/', {
     '/results': ResultsPage,
 });
 
-resources.getResources(m.route("/"));
+student.refreshGenerals();
+resources.getResources(student.refreshLaboratory(m.route(resources.urls.laboratory)));
+
+////bootstrap
+$(function () {
+    $('#mainpage').tooltip({
+        selector: '[data-toggle=tooltip]'
+    });
+    $('#mainpage').popover({
+        selector: '[data-toggle=popover]'
+    });
+});
+
