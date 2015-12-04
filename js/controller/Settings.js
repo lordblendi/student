@@ -43,7 +43,7 @@ Settings.controller = function () {
         else {
             self.mailingList(true);
         }
-    };
+    };e
 
     this.toogleNotification = function () {
         if (self.notification()) {

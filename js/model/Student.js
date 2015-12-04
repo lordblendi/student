@@ -20,6 +20,8 @@ function Student() {
         deadline: "",
         repository: "",
         entrytest: "",
+        finalcommit: "",
+        commits: {},
         report: {
             evaluator: "",
             grade: "",
@@ -66,6 +68,8 @@ function Student() {
             self.laboratory.deadline = newLaboratory.deadline;
             self.laboratory.repository = newLaboratory.repository;
             self.laboratory.entrytest = newLaboratory.entrytest;
+            self.laboratory.finalcommit = newLaboratory.finalcommit;
+            self.laboratory.commits = newLaboratory.commits;
         }
 
         if (self.laboratory.statusCode == "after") {
@@ -88,6 +92,10 @@ function Student() {
         self.name = newGenerals.name;
         self.neptun = newGenerals.neptun;
         self.id = newGenerals.id;
+    };
+
+    this.setNewFinalCommit = function(newCommit){
+        self.laboratory.finalcommit = newCommit;
     };
 
     this.refreshSettings = function (routing) {

@@ -56,13 +56,8 @@
       "deadline" : "2015.12.11. 12:00",
       "repository" : "git@gitlab.db.bme.hu:pelda/pelda.git",
       "entrytest" : "5",
-      "finalcommit" : "Branch1/1",
-      "commits" : {
-         "1" : "Branch1/1",
-         "2" : "Branch1/2",
-         "3" : "Branch2/3",
-         "4" : "Branch2/4"
-      },
+      "finalcommit" : "3",
+      "commits" : ["Branch1/1","Branch1/2","Branch2/3","Branch2/4"],
       "report" : {
         "grade" : "5",
         "evaluator" : "Nori",
