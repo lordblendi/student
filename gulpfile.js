@@ -7,6 +7,7 @@ var msx = require('msx');
 var through = require('through2');
 var gutil = require('gulp-util');
 var plumber = require('gulp-plumber');
+var drakov = require('drakov');
 
 
 function msxTransform(options) {
@@ -65,7 +66,18 @@ gulp.task('browserify', function () {
 
 });
 
+gulp.task('drakov-server', function () {
+
+    var argv = {
+        sourceFiles: './api-blueprint/*.md',
+        serverPort: 3000
+    };
+
+    drakov.run(argv);
+
+});
+
 
 gulp.task('default', function () {
-    gulp.start('browserify');
+    gulp.start('browserify').start('drakov-server');
 });
