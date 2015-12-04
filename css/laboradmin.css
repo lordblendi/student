@@ -88,19 +88,12 @@ td {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-
+    display : block;
 }
 
-a .td-review {
-    margin: 0 auto;
-    width: 400px;
-    max-width : 400px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    color: #FFFFFF;
+a, a:focus, a:hover{
     text-decoration: none;
-
+    color: #000;
 }
 
 .lab-tabs {

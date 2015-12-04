@@ -16,10 +16,10 @@ AfterLaboratoryTab.view = function (ctrl) {
             </tr>
             <tr>
                 <td class="td-middle" colspan="2">
-                    <div tabindex="0" class="td-review" role="button" data-container="body" data-toggle="popover"
-                       data-trigger="focus click" data-placement="bottom" data-content={ctrl.reportreview}>
+                    <a tabindex="0" class="td-review" role="button" data-container="body" data-toggle="popover"
+                       data-trigger="click" data-placement="bottom" data-animation="true" data-content={ctrl.reportreview}>
                         {ctrl.reportreview}
-                    </div>
+                    </a>
 
                 </td>
             </tr>
@@ -29,9 +29,10 @@ AfterLaboratoryTab.view = function (ctrl) {
             </tr>
             <tr>
                 <td class="td-middle" colspan="2">
-                    <div class="td-review">
+                    <a tabindex="1" class="td-review" role="button" data-container="body" data-toggle="popover"
+                         data-trigger="click" data-placement="bottom" data-animation="true" data-content={ctrl.laboratoryreview}>
                         {ctrl.laboratoryreview}
-                    </div>
+                    </a>
                 </td>
             </tr>
         </table>
