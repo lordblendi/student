@@ -16,21 +16,21 @@ Settings.view = function (ctrl) {
         <tr>
             <td class="td-right td-bold">{resources.getResource("settings-label-oldpwd")}</td>
             <td class="td-left">
-                <input type="text" class="form-control basic-input"
+                <input type="password" class="form-control basic-input"
                        placeholder={resources.getResource("settings-label-oldpwd")}/>
             </td>
         </tr>
         <tr>
             <td class="td-right td-bold">{resources.getResource("settings-label-newpwd")}</td>
             <td class="td-left">
-                <input type="text" class="form-control basic-input"
+                <input type="password" class="form-control basic-input"
                        placeholder={resources.getResource("settings-label-newpwd")}/>
             </td>
         </tr>
         <tr>
             <td class="td-right td-bold">{resources.getResource("settings-label-newpwdagain")}</td>
             <td class="td-left">
-                <input type="text" class="form-control basic-input"
+                <input type="password" class="form-control basic-input"
                        placeholder={resources.getResource("settings-label-newpwdagain")}/>
             </td>
         </tr>
@@ -62,7 +62,7 @@ Settings.view = function (ctrl) {
         <tr>
             <td class="td-right td-bold">{resources.getResource("settings-label-ssh")}</td>
             <td class="td-left">
-                <textarea class="form-control ssh" rows="6" placeholder={resources.getResource("settings-label-ssh")}>
+                <textarea class="form-control ssh" rows="9" placeholder={resources.getResource("settings-label-ssh")}>
                     {ctrl.SshPublicKey()}
                 </textarea>
             </td>
