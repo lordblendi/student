@@ -70,6 +70,7 @@ gulp.task('drakov-server', function () {
 
     var argv = {
         sourceFiles: './api-blueprint/*.md',
+        autoOptions: true,
         serverPort: 3000
     };
 
@@ -79,5 +80,6 @@ gulp.task('drakov-server', function () {
 
 
 gulp.task('default', function () {
-    gulp.start('browserify').start('drakov-server');
+    gulp.start('browserify')
+        .start('drakov-server');
 });
