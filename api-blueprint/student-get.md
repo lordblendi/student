@@ -74,7 +74,7 @@
 + Response 200 (application/json)
    {
       "email" : "teszt@teszt.hu",
-      "notification" : "true",
-      "mailingList" : "false",
+      "notification" : true,
+      "mailingList" : false,
       "sshPublicKey" : "ssh-rsa AAAB3nZaC1aycAAEU+/ZdulUJoeuchOUU02/j18L7fo+ltQ0f322+Au/9yy9oaABBRCrHN/yo88BC0AB3nZaC1aycAAEU+/ZdulUJoeuchOUU02/j18L7fo+ltQ0f322AB3nZaC1aycAAEU+/ZdulUJoeuchOUU02/j18L7fo+ltQ0f322AB3nZaC1aycAAEU+/ZdulUJoeuchOUU02/j18L7fo+ltQ0f322AB3nZaC1aycAAEU+/ZdulUJoeuchOUU02/j18L7fo+ltQ0f322klCi0/aEBBc02N+JJP teszt@teszt.hu"
     }

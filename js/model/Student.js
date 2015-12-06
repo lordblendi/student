@@ -13,6 +13,7 @@ function Student() {
     //TODO commits
     this.laboratory = {
         time: "",
+        labid: "",
         location: "",
         demonstrator: "",
         description: "",
@@ -59,6 +60,7 @@ function Student() {
 
     this.setLaboratory = function (newLaboratory) {
         self.laboratory.time = newLaboratory.time;
+        self.laboratory.labid = newLaboratory.labid;
         self.laboratory.description = newLaboratory.description;
         self.laboratory.location = newLaboratory.location;
         self.laboratory.demonstrator = newLaboratory.demonstrator;
@@ -81,10 +83,10 @@ function Student() {
         }
     };
 
-    this.setSettings = function (newSettings) {
+    this.setSettings = function (newSettings, oldpwd, newpwd) {
         self.settings.email = newSettings.email;
-        self.settings.mailingList = newSettings.mailingList == "true";
-        self.settings.notification = newSettings.notification == "true";
+        self.settings.mailingList = newSettings.mailingList;
+        self.settings.notification = newSettings.notification;
         self.settings.sshPublicKey = newSettings.sshPublicKey;
     };
 
@@ -94,8 +96,9 @@ function Student() {
         self.id = newGenerals.id;
     };
 
-    this.setNewFinalCommit = function(newCommit){
+    this.setNewFinalCommit = function (newCommit) {
         self.laboratory.finalcommit = newCommit;
+        self.updateFinalCommit();
     };
 
     this.refreshSettings = function (routing) {
@@ -108,5 +111,30 @@ function Student() {
 
     this.refreshGenerals = function () {
         getWithoutRouting(resources.getServer() + resources.urls.servergeneral, this.setGenerals);
+    };
+
+    this.updateFinalCommit = function () {
+        var data = {
+            finalcommit: self.laboratory.finalcommit,
+            labid: self.laboratory.labid
+        };
+
+        post(resources.getServer() + resources.urls.serversetfinalcommit, data);
+    };
+
+    this.updateSettings = function (oldpwd, newpwd) {
+        var data = {
+            email: self.settings.email,
+            notification: self.settings.notification,
+            mailingList: self.settings.mailingList,
+            sshPublicKey: self.settings.sshPublicKey
+        };
+
+        if(oldpwd && newpwd){
+            data.oldpwd = oldpwd;
+            data.newpwd = newpwd;
+        }
+
+        post(resources.getServer() + resources.urls.serversetsettings, data);
     };
 };

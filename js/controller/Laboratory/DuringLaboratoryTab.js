@@ -12,7 +12,9 @@ DuringLaboratoryTab.controller = function () {
     this.finalcommit(student.laboratory.finalcommit);
     this.commits = student.laboratory.commits;
 
-    this.newFinalCommit = function(){
+
+
+    this.newFinalCommit = function () {
         student.setNewFinalCommit(self.finalcommit());
     };
 };

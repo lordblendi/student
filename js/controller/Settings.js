@@ -5,35 +5,78 @@ var Settings = Settings || {};
 
 Settings.controller = function () {
     var self = this;
-    this.SshPublicKey = m.prop('');
+    this.sshPublicKey = m.prop('');
     this.email = m.prop('');
     this.mailingList = m.prop('');
     this.notification = m.prop('');
 
-    this.SshPublicKey(student.settings.sshPublicKey);
+    this.sshPublicKey(student.settings.sshPublicKey);
     this.email(student.settings.email);
     this.mailingList(student.settings.mailingList);
     this.notification(student.settings.notification);
 
+    this.oldpwd = m.prop('');
+    this.newpwd = m.prop('');
+    this.newpwdagain = m.prop('');
+
 
     this.saveSettings = function () {
-        var mail = "false";
-        if (self.mailingList()) {
-            mail = "true";
+        $("#inputpwd").removeClass('wronginput');
+        $("#inputpwdagain").removeClass('wronginput');
+        $("#oldpwd").removeClass('wronginput');
+
+        var data = {
+            "mailingList": self.mailingList(),
+            "notification": self.notification()
+        };
+
+        if (self.email()) {
+            data.email = self.email();
         }
 
-        var notification = "false";
-        if (self.notification()) {
-            notification = "true";
+        if (self.sshPublicKey()) {
+            data.sshPublicKey = self.sshPublicKey();
         }
 
-        student.setSettings({
-            "email": self.email(),
-            "mailingList": mail,
-            "notification": notification,
-            "sshPublicKey": self.SshPublicKey()
-        });
-        //self.refreshSettingsData();
+        student.setSettings(data);
+
+        if (self.oldpwd() && self.newpwd()) {
+            if (self.newpwdagain()) {
+                if (self.newpwd() === self.newpwdagain()) {
+                    student.updateSettings(self.oldpwd(), self.newpwd());
+                }
+                else {
+                    $("#inputpwd").addClass('wronginput');
+                    $("#inputpwdagain").addClass('wronginput');
+                }
+            }
+            else {
+                $("#inputpwdagain").addClass('wronginput');
+            }
+        }
+        else if (self.oldpwd() && !self.newpwd()) {
+            $("#inputpwd").addClass('wronginput');
+            if (!self.newpwdagain()) {
+                $("#inputpwdagain").addClass('wronginput');
+            }
+        }
+        else if (!self.oldpwd() && self.newpwd()) {
+            $("#oldpwd").addClass('wronginput');
+            if (!self.newpwdagain()) {
+                $("#inputpwdagain").addClass('wronginput');
+            }
+            else if (self.newpwd() != self.newpwdagain()) {
+                $("#inputpwd").addClass('wronginput');
+                $("#inputpwdagain").addClass('wronginput');
+            }
+        }
+        else if (self.newpwdagain()) {
+            $("#inputpwd").addClass('wronginput');
+            $("#oldpwd").addClass('wronginput');
+        }
+        else {
+            student.updateSettings();
+        }
     };
 
     this.toogleMailinglist = function () {

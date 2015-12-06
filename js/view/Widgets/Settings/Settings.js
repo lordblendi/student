@@ -16,22 +16,25 @@ Settings.view = function (ctrl) {
         <tr>
             <td class="td-right td-bold">{resources.getResource("settings-label-oldpwd")}</td>
             <td class="td-left">
-                <input type="password" class="form-control basic-input"
-                       placeholder={resources.getResource("settings-label-oldpwd")}/>
+                <input id="oldpwd" type="password" class="form-control basic-input"
+                       placeholder={resources.getResource("settings-label-oldpwd")}
+                       onchange={m.withAttr("value", ctrl.oldpwd)}/>
             </td>
         </tr>
         <tr>
             <td class="td-right td-bold">{resources.getResource("settings-label-newpwd")}</td>
             <td class="td-left">
-                <input type="password" class="form-control basic-input"
-                       placeholder={resources.getResource("settings-label-newpwd")}/>
+                <input id="inputpwd" type="password" class="form-control basic-input"
+                       placeholder={resources.getResource("settings-label-newpwd")}
+                       onchange={m.withAttr("value", ctrl.newpwd)}/>
             </td>
         </tr>
         <tr>
-            <td class="td-right td-bold">{resources.getResource("settings-label-newpwdagain")}</td>
+            <td class="td-right td-bold">{resources.getResource("settings-label-newpwdagain")} </td>
             <td class="td-left">
-                <input type="password" class="form-control basic-input"
-                       placeholder={resources.getResource("settings-label-newpwdagain")}/>
+                <input id="inputpwdagain" type="password" class="form-control basic-input"
+                       placeholder={resources.getResource("settings-label-newpwdagain")}
+                       onchange={m.withAttr("value", ctrl.newpwdagain)}/>
             </td>
         </tr>
         <tr>
@@ -63,7 +66,7 @@ Settings.view = function (ctrl) {
             <td class="td-right td-bold">{resources.getResource("settings-label-ssh")}</td>
             <td class="td-left">
                 <textarea class="form-control ssh" rows="9" placeholder={resources.getResource("settings-label-ssh")}>
-                    {ctrl.SshPublicKey()}
+                    {ctrl.sshPublicKey()}
                 </textarea>
             </td>
         </tr>
@@ -73,5 +76,7 @@ Settings.view = function (ctrl) {
                         onclick={ctrl.saveSettings}> {resources.getResource("settings-label-save")}</button>
             </td>
         </tr>
+
+
     </table>
 };

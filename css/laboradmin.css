@@ -160,3 +160,7 @@ a, a:focus, a:hover{
 .popover {
     max-width: 600px;
 }
+
+.wronginput{
+    border-color: #FF0000;
+}

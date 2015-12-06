@@ -2,23 +2,25 @@ function Resources() {
     var self = this;
     this.json = "";
     this.urls = {
-      "host" :"http://localhost/laboradmin",
-      "server" :"http://localhost:3000/student",
-      "serversettings" :"/settings",
-      "serverlaboratory" :"/laboratory",
-      "servergeneral" :"/general",
-      "serverlaboratory-after" :"/lab/after",
-      "serverlaboratory-before" :"http://localhost:3000/student",
-      "serverlaboratory-during" :"http://localhost:3000/student",
-      "resources" :"/dist/resources",
-      "settings" :"/settings",
-      "results" :"/results",
-      "laboratory" :"/",
-      "resourceshu" :"/resources-hu.json"
+        "host": "http://localhost/laboradmin",
+        "server": "http://localhost:3000/student",
+        "serversettings": "/settings",
+        "serverlaboratory": "/laboratory",
+        "servergeneral": "/general",
+        "serversetfinalcommit": "/setfinalcommit",
+        "serversetsettings": "/setsettings",
+        "serverlaboratory-after": "/lab/after",
+        "serverlaboratory-before": "http://localhost:3000/student",
+        "serverlaboratory-during": "http://localhost:3000/student",
+        "resources": "/dist/resources",
+        "settings": "/settings",
+        "results": "/results",
+        "laboratory": "/",
+        "resourceshu": "/resources-hu.json"
 
     };
 
-    this.getServer = function(){
+    this.getServer = function () {
         return this.urls.server + "/" + student.id;
     };
 
