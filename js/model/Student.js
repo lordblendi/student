@@ -97,9 +97,9 @@ function Student() {
         self.id = newGenerals.id;
     };
 
-    this.setNewFinalCommit = function (newCommit) {
+    this.setNewFinalCommit = function (newCommit, id) {
         self.laboratory.finalcommit = newCommit;
-        self.updateFinalCommit();
+        self.updateFinalCommit(id);
     };
 
     this.refreshSettings = function (routing) {
@@ -120,16 +120,16 @@ function Student() {
         }, routing);
     };
 
-    this.updateFinalCommit = function () {
+    this.updateFinalCommit = function (id) {
         var data = {
             finalcommit: self.laboratory.finalcommit,
             labid: self.laboratory.labid
         };
 
-        post(resources.getServer() + resources.urls.serversetfinalcommit, data);
+        post(resources.getServer() + resources.urls.serversetfinalcommit, data, id);
     };
 
-    this.updateSettings = function (oldpwd, newpwd) {
+    this.updateSettings = function (oldpwd, newpwd, id) {
         var data = {
             email: self.settings.email,
             notification: self.settings.notification,
@@ -142,6 +142,6 @@ function Student() {
             data.newpwd = newpwd;
         }
 
-        post(resources.getServer() + resources.urls.serversetsettings, data);
+        post(resources.getServer() + resources.urls.serversetsettings, data, id);
     };
 };

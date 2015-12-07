@@ -15,6 +15,6 @@ DuringLaboratoryTab.controller = function () {
 
 
     this.newFinalCommit = function () {
-        student.setNewFinalCommit(self.finalcommit());
+        student.setNewFinalCommit(self.finalcommit(), "#duringsave");
     };
 };

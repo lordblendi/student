@@ -10,8 +10,8 @@ function getWithoutRouting(url, nextFunction) {
     });
 }
 
-function post(url, data) {
-    var xhrConfig = function(xhr) {
+function post(url, data, id) {
+    var xhrConfig = function (xhr) {
         xhr.setRequestHeader("Content-Type", "application/json");
     };
     m.request({
@@ -23,7 +23,23 @@ function post(url, data) {
             return serializeJson(data)
         }
     }).then(function (result) {
-        console.log(result);
+        if (result.status === "ok") {
+            $(id).addClass('statusOk');
+            setTimeout(function () {
+                $(id).removeClass('statusOk');
+            }, 5000);
+        }
+        else {
+            $(id).addClass('statusNotOk');
+            setTimeout(function () {
+                $(id).removeClass('statusNotOk');
+            }, 10000);
+        }
+    }, function (error) {
+        $(id).addClass('statusNotOk');
+        setTimeout(function () {
+            $(id).removeClass('statusNotOk');
+        }, 5000);
     });
 }
 

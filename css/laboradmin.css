@@ -164,3 +164,14 @@ a, a:focus, a:hover{
 .wronginput{
     border-color: #FF0000;
 }
+
+.statusOk{
+    border-color: #00FF00;
+    color: #00FF00;
+}
+
+.statusNotOk{
+    border-color: #FF0000;
+    color: #FF0000;
+}
+

@@ -72,7 +72,7 @@ Settings.view = function (ctrl) {
         </tr>
         <tr>
             <td class="td-middle" colspan="2">
-                <button type="button" class="btn btn-default"
+                <button id="settingssave" type="button" class="btn btn-default"
                         onclick={ctrl.saveSettings}> {resources.getResource("settings-label-save")}</button>
             </td>
         </tr>

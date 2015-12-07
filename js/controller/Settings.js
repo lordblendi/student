@@ -43,7 +43,7 @@ Settings.controller = function () {
         if (self.oldpwd() && self.newpwd()) {
             if (self.newpwdagain()) {
                 if (self.newpwd() === self.newpwdagain()) {
-                    student.updateSettings(self.oldpwd(), self.newpwd());
+                    student.updateSettings(self.oldpwd(), self.newpwd(), '#settingssave');
                 }
                 else {
                     $("#inputpwd").addClass('wronginput');
@@ -75,7 +75,7 @@ Settings.controller = function () {
             $("#oldpwd").addClass('wronginput');
         }
         else {
-            student.updateSettings();
+            student.updateSettings('#settingssave');
         }
     };
 
