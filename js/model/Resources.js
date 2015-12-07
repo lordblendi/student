@@ -3,7 +3,8 @@ function Resources() {
     this.json = "";
     this.urls = {
         "host": "http://localhost/laboradmin",
-        "server": "http://localhost:3000/student",
+        "server": "http://localhost:3000",
+        "serverstudent": "/student",
         "serversettings": "/settings",
         "serverlaboratory": "/laboratory",
         "servergeneral": "/general",
@@ -13,7 +14,7 @@ function Resources() {
         "serverlaboratory-after": "/lab/after",
         "serverlaboratory-before": "http://localhost:3000/student",
         "serverlaboratory-during": "http://localhost:3000/student",
-        "resources": "/dist/resources",
+        "resources": "/resources",
         "settings": "/settings",
         "results": "/results",
         "laboratory": "/",
@@ -22,7 +23,7 @@ function Resources() {
     };
 
     this.getServer = function () {
-        return this.urls.server + "/" + student.id;
+        return this.urls.server + this.urls.serverstudent + "/" + student.id;
     };
 
     this.getResource = function (key) {
@@ -34,7 +35,8 @@ function Resources() {
     };
 
     this.getResources = function (routing) {
-        get(this.urls.host + this.urls.resources + this.urls.resourceshu, this.setResources, routing);
+        //get(this.urls.host + this.urls.resources + this.urls.resourceshu, this.setResources, routing);
+        get(this.urls.server + this.urls.resources, this.setResources, routing);
     };
 
 };

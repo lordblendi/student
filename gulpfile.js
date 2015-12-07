@@ -83,6 +83,6 @@ gulp.task('drakov-server', function () {
 
 gulp.task('default', function () {
     gulp.start('browserify')
-        .start('move-resources')
+        //.start('move-resources')
         .start('drakov-server');
 });
