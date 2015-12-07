@@ -2,7 +2,9 @@
 
 var SettingsPanel = SettingsPanel || {};
 
-
+/*
+ settings panel view
+ */
 SettingsPanel.view = function () {
     return <div class="panel panel-default" id="settings">
         <div class="panel-heading">

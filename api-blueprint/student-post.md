@@ -3,7 +3,6 @@
 ## Automatic response to OPTIONS requests
            
 + Request (application/json)
-First POST example with body 
 
     + Schema
 
@@ -31,7 +30,6 @@ First POST example with body
 ## Automatic response to OPTIONS requests
            
 + Request (application/json)
-First POST example with body 
 
     + Schema
 

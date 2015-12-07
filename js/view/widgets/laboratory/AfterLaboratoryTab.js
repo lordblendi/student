@@ -2,7 +2,9 @@
 
 var AfterLaboratoryTab = AfterLaboratoryTab || {};
 
-
+/*
+ after laboratory tab view
+ */
 AfterLaboratoryTab.view = function (ctrl) {
     return <div role="tabpanel" class="tab-pane" id="after">
         <table>
@@ -17,7 +19,8 @@ AfterLaboratoryTab.view = function (ctrl) {
             <tr>
                 <td class="td-middle" colspan="2">
                     <a tabindex="0" class="td-review" role="button" data-container="body" data-toggle="popover"
-                       data-trigger="click" data-placement="bottom" data-animation="true" data-content={ctrl.reportreview}>
+                       data-trigger="click" data-placement="bottom" data-animation="true"
+                       data-content={ctrl.reportreview}>
                         {ctrl.reportreview}
                     </a>
 
@@ -30,7 +33,8 @@ AfterLaboratoryTab.view = function (ctrl) {
             <tr>
                 <td class="td-middle" colspan="2">
                     <a tabindex="1" class="td-review" role="button" data-container="body" data-toggle="popover"
-                         data-trigger="click" data-placement="bottom" data-animation="true" data-content={ctrl.laboratoryreview}>
+                       data-trigger="click" data-placement="bottom" data-animation="true"
+                       data-content={ctrl.laboratoryreview}>
                         {ctrl.laboratoryreview}
                     </a>
                 </td>

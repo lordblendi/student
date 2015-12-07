@@ -2,7 +2,9 @@
 
 var BeforeLaboratoryTab = BeforeLaboratoryTab || {};
 
-
+/*
+ before laboratory tab view
+ */
 BeforeLaboratoryTab.view = function (ctrl) {
     return <div role="tabpanel" class="tab-pane active" id="before">
         <table>

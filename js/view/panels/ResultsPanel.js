@@ -2,7 +2,9 @@
 
 var ResultsPanel = ResultsPanel || {};
 
-
+/*
+ results panel view
+ */
 ResultsPanel.view = function () {
     return <div class="panel panel-default" id="settings">
         <div class="panel-heading">

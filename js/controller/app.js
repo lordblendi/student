@@ -1,5 +1,8 @@
 'use strict';
-
+/*
+ app - entry point of the application
+ necessary variables: one for the model, one for the resources and one of each page for routing table
+ */
 var LaboratoryPage = LaboratoryPage || {};
 var SettingsPage = SettingsPage || {};
 var ResultsPage = ResultsPage || {};
@@ -10,13 +13,17 @@ var resources = new Resources();
 //set routing to hash mode
 m.route.mode = 'hash';
 
-//set routing lists with components
+//routing table -> set routing lists with components
 m.route(document.getElementById("mainpage"), '/', {
     '/': LaboratoryPage,
     '/settings': SettingsPage,
-    '/results': ResultsPage,
+    '/results': ResultsPage
 });
 
+/*
+ getting general student information for the menu bar
+ getting resources and then routing to main page
+ */
 student.refreshGenerals();
 resources.getResources(student.refreshLaboratory(m.route(resources.urls.laboratory)));
 //

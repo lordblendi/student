@@ -2,7 +2,9 @@
 
 var Results = Results || {};
 
-
+/*
+ results panel content view
+ */
 Results.view = function (ctrl) {
 
     return <table class="table-results">

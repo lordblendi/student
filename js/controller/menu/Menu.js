@@ -4,7 +4,7 @@ var Menu = Menu || {};
 /*
  menu controller
  getting the necessary data from the model, so the view can get it via the controller
- setting onclicks for each button. they ask the model to refresh data and sends a routing request
+ setting on clicks for each button. they ask the model to refresh data and sends a routing request
  */
 Menu.controller = function () {
     this.displayname = student.getDisplayName();

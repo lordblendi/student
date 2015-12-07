@@ -2,7 +2,9 @@
 
 var Laboratory = Laboratory || {};
 
-
+/*
+ laboratory panel content view: tab navbar, panel heading, tabs in panel body
+ */
 Laboratory.view = function (ctrl) {
     return <div>
         <LaboratoryTabs/>

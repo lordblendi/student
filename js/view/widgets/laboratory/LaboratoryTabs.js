@@ -2,6 +2,9 @@
 
 var LaboratoryTabs = LaboratoryTabs || {};
 
+/*
+ laboratory tab navbar view
+ */
 LaboratoryTabs.view = function () {
     return <ul class="nav nav-tabs lab-tabs" role="tablist">
         <li role="presentation" class="active"><a href="#before" aria-controls="before" role="tab"

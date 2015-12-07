@@ -1,6 +1,12 @@
+/*
+ class for handling resources.
+ urls are saved as an object
+ resources saved as an object after loading
+ */
+
 function Resources() {
     var self = this;
-    this.json = "";
+    this.resource = "";
     this.urls = {
         "host": "http://localhost/laboradmin",
         "server": "http://localhost:3000",
@@ -22,16 +28,18 @@ function Resources() {
 
     };
 
+    //returns the first part of the server's url
     this.getServer = function () {
         return this.urls.server + this.urls.serverstudent + "/" + student.id;
     };
 
+    //returns the key's value from the resource object
     this.getResource = function (key) {
-        return self.json[key];
+        return self.resource[key];
     };
 
     this.setResources = function (newResources) {
-        self.json = newResources;
+        self.resource = newResources;
     };
 
     this.getResources = function (routing) {
@@ -39,4 +47,4 @@ function Resources() {
         get(this.urls.server + this.urls.resources, this.setResources, routing);
     };
 
-};
+}

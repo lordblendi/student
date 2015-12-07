@@ -2,7 +2,9 @@
 
 var Settings = Settings || {};
 
-
+/*
+ settings panel content view
+ */
 Settings.view = function (ctrl) {
     return <table>
         <tr>

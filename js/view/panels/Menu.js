@@ -2,7 +2,9 @@
 
 var Menu = Menu || {};
 
-
+/*
+ menu navbar view
+ */
 Menu.view = function (ctrl) {
     return <nav id="menu" class="navbar navbar-default navbar-static-top">
         <div class="navbar-header">

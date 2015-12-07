@@ -2,7 +2,9 @@
 
 var DuringLaboratoryTab = DuringLaboratoryTab || {};
 
-
+/*
+ during laboratory tab view
+ */
 DuringLaboratoryTab.view = function (ctrl) {
     var options = [];
     for (var i = 0; i < ctrl.commits.length; i++) {
@@ -39,7 +41,8 @@ DuringLaboratoryTab.view = function (ctrl) {
             <tr>
                 <td class="td-middle" colspan="2">
                     <button id="duringsave" type="button"
-                            class="btn btn-default" onclick={ctrl.newFinalCommit}> {resources.getResource("laboratory-label-save")}</button>
+                            class="btn btn-default"
+                            onclick={ctrl.newFinalCommit}> {resources.getResource("laboratory-label-save")}</button>
                 </td>
             </tr>
         </table>
