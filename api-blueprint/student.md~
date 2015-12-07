@@ -12,27 +12,35 @@
 ## Get student results [GET]
 + Response 200 (application/json)
    {
-        "results": [{
-            "entry": "5",
-            "report": "4",
-            "lab": "4"
-        }, {
-            "entry": "5",
-            "report": "4",
-            "lab": "5"
-        }, {
-            "entry": "5",
-            "report": "5",
-            "lab": "5"
-        }, {
-            "entry": "4",
-            "report": "4",
-            "lab": "4"
-        }, {
-            "entry": "-",
-            "report": "-",
-            "lab": "-"
-        }]
+      "name" : "Hallgato Neve",
+      "neptun" : "Neptun",
+      "results" : {
+         "1" : {
+            "entry" : "5",
+            "report" : "4", 
+            "lab" : "4"
+            },
+         "2" : {
+            "entry" : "5",
+            "report" : "4", 
+            "lab" : "4"
+            },
+         "3" : {
+            "entry" : "5",
+            "report" : "4", 
+            "lab" : "4"
+            },
+         "4" : {
+            "entry" : "5",
+            "report" : "4", 
+            "lab" : "4"
+            },
+         "5" : {
+            "entry" : "-",
+            "report" : "-", 
+            "lab" : "-"
+            }
+      }
    }
 
 # Message [/student/{userid}/laboratory]
@@ -66,7 +74,45 @@
 + Response 200 (application/json)
    {
       "email" : "teszt@teszt.hu",
-      "notification" : true,
-      "mailingList" : false,
+      "notification" : "true",
+      "mailingList" : "false",
       "sshPublicKey" : "ssh-rsa AAAB3nZaC1aycAAEU+/ZdulUJoeuchOUU02/j18L7fo+ltQ0f322+Au/9yy9oaABBRCrHN/yo88BC0AB3nZaC1aycAAEU+/ZdulUJoeuchOUU02/j18L7fo+ltQ0f322AB3nZaC1aycAAEU+/ZdulUJoeuchOUU02/j18L7fo+ltQ0f322AB3nZaC1aycAAEU+/ZdulUJoeuchOUU02/j18L7fo+ltQ0f322AB3nZaC1aycAAEU+/ZdulUJoeuchOUU02/j18L7fo+ltQ0f322klCi0/aEBBc02N+JJP teszt@teszt.hu"
     }
+    
+# Message [/student/{userid}/setfinalcommit]
+### Post to the first example [POST]
+## Automatic response to OPTIONS requests
+
++ Request (application/json)
+First POST example with body 
+
+    + Body
+
+            {"first": "example"}
+
++ Response 200 (application/json;charset=UTF-8)
+
+    + Body
+    
+            {
+                "first": "example",
+                "status": "ok"
+            }
+            
+            
++ Request (application/json)
+First POST example with body 
+
+    + Body
+
+            {"first": "exampl"}
+
++ Response 200 (application/json;charset=UTF-8)
+
+    + Body
+
+            {
+                "first": "exampl",
+                "status": "ok"
+            }
+

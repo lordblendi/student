@@ -7,6 +7,7 @@ function Resources() {
         "serversettings": "/settings",
         "serverlaboratory": "/laboratory",
         "servergeneral": "/general",
+        "serverresult": "/results",
         "serversetfinalcommit": "/setfinalcommit",
         "serversetsettings": "/setsettings",
         "serverlaboratory-after": "/lab/after",

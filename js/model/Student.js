@@ -33,6 +33,7 @@ function Student() {
             review: ""
         }
     };
+    this.results = {};
 
     this.getDisplayName = function () {
         return self.name + " (" + self.neptun.toUpperCase() + ")";
@@ -113,6 +114,12 @@ function Student() {
         getWithoutRouting(resources.getServer() + resources.urls.servergeneral, this.setGenerals);
     };
 
+    this.refreshResults = function (routing) {
+        get(resources.getServer() + resources.urls.serverresult, function (results) {
+            self.results = results.results;
+        }, routing);
+    };
+
     this.updateFinalCommit = function () {
         var data = {
             finalcommit: self.laboratory.finalcommit,
@@ -130,7 +137,7 @@ function Student() {
             sshPublicKey: self.settings.sshPublicKey
         };
 
-        if(oldpwd && newpwd){
+        if (oldpwd && newpwd) {
             data.oldpwd = oldpwd;
             data.newpwd = newpwd;
         }

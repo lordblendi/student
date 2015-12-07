@@ -16,7 +16,8 @@ Menu.controller = function () {
     };
 
     this.resultsOnClick = function(){
-        m.route(resources.urls.results);
+        student.refreshResults(m.route(resources.urls.results));
+
     };
 
     this.redirectTo = function(route){
