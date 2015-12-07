@@ -55,14 +55,16 @@ gulp.task('css', function () {
         .pipe(gulp.dest('./dist/'))
 });
 
-gulp.task('move-resources', function(){
+gulp.task('move-resources', function () {
     gulp.src('./resources/*.json')
         .pipe(gulp.dest('./dist/resources/'))
 });
 
 
 gulp.task('browserify', function () {
-    gulp.start('msx').start('html').start('css').start('move-resources');
+    gulp.start('msx')
+        .start('html')
+        .start('css');
 
 });
 
@@ -81,5 +83,6 @@ gulp.task('drakov-server', function () {
 
 gulp.task('default', function () {
     gulp.start('browserify')
+        .start('move-resources')
         .start('drakov-server');
 });
