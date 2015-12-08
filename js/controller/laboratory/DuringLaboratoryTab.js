@@ -16,8 +16,8 @@ DuringLaboratoryTab.controller = function () {
     this.finalcommit(student.laboratory.finalcommit);
     this.commits = student.laboratory.commits;
 
-    $(
-        function () {
+    //setting auto refresh for reamaining time
+    $(function () {
             var intervalcounter = 1;
             if (self.deadline.indexOf("óra") > -1) {
                 intervalcounter = 60;
