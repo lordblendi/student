@@ -40,7 +40,7 @@ DuringLaboratoryTab.view = function (ctrl) {
             </tr>
             <tr>
                 <td class="td-middle" colspan="2">
-                    <button id="duringsave" type="button"
+                    <button name="duringsave" type="button"
                             class="btn btn-default"
                             onclick={ctrl.newFinalCommit}> {resources.getResource("laboratory-label-save")}</button>
                 </td>

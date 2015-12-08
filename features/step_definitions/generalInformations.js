@@ -12,7 +12,7 @@ module.exports = function () {
         callback();
     });
 
-    this.Then(/^I should see the date$/, function (callback) {
+    this.Then(/^I see the date$/, function (callback) {
         var date = this.world.browser.text('#laboratorydate');
         if (date.match(/^(\d{4})\.(\d{2})\.(\d{2})\. (\d{2}):(\d{2})$/)) {
             callback();
@@ -20,11 +20,11 @@ module.exports = function () {
         callback(new Error("Date not included in text field."));
     });
 
-    this.Then(/^I should see the demonstrator's name: "([^"]*)"$/, function (name, callback) {
+    this.Then(/^I see the demonstrator's name: "([^"]*)"$/, function (name, callback) {
         this.world.text('#laboratorydemonstrator', name, callback);
     });
 
-    this.Then(/^I should see the location: "([^"]*)"$/, function (location, callback) {
+    this.Then(/^I see the location: "([^"]*)"$/, function (location, callback) {
         this.world.text('#laboratorylocation', location, callback);
     });
 

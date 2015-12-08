@@ -4,4 +4,4 @@ Feature: laboradmin website
 
   Scenario: Opening the portal
     When I visit the laboradmin homepage
-    Then I should see "laboradmin" as the page title
+    Then I see "laboradmin" as the page title

@@ -5,6 +5,6 @@ Feature: General informations
   Scenario: Get general information about the laboratory
     Given I am on the main page
     When I press the Labor button
-    Then I should see the date
-    And I should see the demonstrator's name: "Teszt Oktató 1"
-    And I should see the location: "IL105"
+    Then I see the date
+    And I see the demonstrator's name: "Teszt Oktató 1"
+    And I see the location: "IL105"

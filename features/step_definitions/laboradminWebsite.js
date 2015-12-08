@@ -10,7 +10,7 @@ module.exports = function () {
         // the next step can be executed by Cucumber.
     });
 
-    this.Then('I should see "$title" as the page title', function (title, callback) {
+    this.Then('I see "$title" as the page title', function (title, callback) {
         // the above string is converted to the following Regexp by Cucumber:
         // /^I should see "([^"]*)" as the page title$/
 

@@ -7,13 +7,13 @@ Feature: During Laboratory information
   and I want to get my report review
 
 
-  Scenario: Get leftover time and repository URL
-    Given I am on the home page
+  Scenario: Get remaining time and repository URL
+    Given I am using the laboradmin portal
     And I am on the laboratory page
     When  I press the Labor után button
-    Then I should see the demonstrator's name and the entry test grade: 5 ("Teszt Oktató 1")
-    And I should see the report grade and the evaluator's name: 4 ("Teszt Oktató 2")
-    And I should see the laboratory grade and the demonstrator's name: 4 ("Teszt Oktató 1")
-    And I should see my laboratory review
-    And I should see my report review
+    Then I see the demonstrator's name and the entry test grade: 5 ("Teszt Oktató 1")
+    And I see the report grade and the evaluator's name: 4 ("Teszt Oktató 2")
+    And I see the laboratory grade and the demonstrator's name: 4 ("Teszt Oktató 1")
+    And I see my laboratory review
+    And I see my report review
 

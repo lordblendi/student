@@ -1,7 +1,7 @@
 module.exports = function () {
     this.World = require('../support/world').World;
 
-    this.Given(/^I am on the home page$/, function (callback) {
+    this.Given(/^I am using laboradmin$/, function (callback) {
         this.world.visit('http://localhost/laboradmin/dist/#/', callback);
     });
 
@@ -19,7 +19,7 @@ module.exports = function () {
         callback();
     });
 
-    this.Then(/^I should see the remaining time till the deadline$/, function (callback) {
+    this.Then(/^I see the remaining time till the deadline$/, function (callback) {
         var deadlinetext = this.world.browser.text('#duringdeadline');
         var date = deadlinetext.split("(")[1].split(")")[0];
 
@@ -30,13 +30,19 @@ module.exports = function () {
 
     });
 
-    this.Then(/^I should see the repository URL: "([^"]*)"$/, function (url, callback) {
+    this.Then(/^I see the repository URL: "([^"]*)"$/, function (url, callback) {
         this.world.text('#duringrepository', url, callback);
     });
 
-    this.Then(/^I should see the entry test grade and the demonstrator's name: (\d+) \("([^"]*)"\)$/, function (grade, demonstrator, callback) {
+    this.Then(/^I see the entry test grade and the demonstrator's name: (\d+) \("([^"]*)"\)$/, function (grade, demonstrator, callback) {
         var entry = grade + " (" + demonstrator + ")"
         this.world.text('#duringentrytest', entry, callback);
+    });
+
+    this.Then(/^I see a list of commits$/, function (callback) {
+        this.world.browser.assert.element("select");
+        this.world.browser.assert.elements("option");
+        callback();
     });
 
 };
