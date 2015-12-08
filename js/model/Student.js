@@ -48,7 +48,11 @@ function Student() {
     this.getRemainingTime = function () {
         var diff = moment(self.laboratory.deadline).diff(moment(), 'hours');
         if (diff < 0) {
-            diff = 0;
+            diff = moment(self.laboratory.deadline).diff(moment(), 'minutes');
+            if (diff < 0) {
+                diff = 0;
+            }
+            return diff + " perc (" + self.laboratory.deadline + ")";
         }
         return diff + " óra (" + self.laboratory.deadline + ")";
     };

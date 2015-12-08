@@ -15,17 +15,17 @@ DuringLaboratoryTab.view = function (ctrl) {
         <table>
             <tr>
                 <td class="td-right td-bold">{resources.getResource("laboratory-label-deadline")}</td>
-                <td class="td-left">{ctrl.deadline}</td>
+                <td class="td-left" id="duringdeadline">{ctrl.deadline}</td>
             </tr>
             <tr>
                 <td class="td-middle td-bold" colspan="2">{resources.getResource("laboratory-label-repository")}</td>
             </tr>
             <tr>
-                <td class="td-middle" colspan="2">{ctrl.repository}</td>
+                <td class="td-middle" id="duringrepository" colspan="2">{ctrl.repository}</td>
             </tr>
             <tr>
                 <td class="td-right td-bold">{resources.getResource("laboratory-label-entrytest")}</td>
-                <td class="td-left">{ctrl.entrytest}</td>
+                <td class="td-left" id="duringentrytest">{ctrl.entrytest}</td>
             </tr>
             <tr>
                 <td class="td-right td-bold">{resources.getResource("laboratory-label-finalcommit")}</td>

@@ -16,6 +16,22 @@ DuringLaboratoryTab.controller = function () {
     this.finalcommit(student.laboratory.finalcommit);
     this.commits = student.laboratory.commits;
 
+    $(
+        function () {
+            var intervalcounter = 1;
+            if (self.deadline.indexOf("óra") > -1) {
+                intervalcounter = 60;
+            }
+            else {
+                intervalcounter = 30;
+            }
+            setInterval(function () {
+                self.deadline = student.getRemainingTime();
+                m.redraw();
+            }, 1000 * intervalcounter);
+        }
+    );
+
 
     this.newFinalCommit = function () {
         student.setNewFinalCommit(self.finalcommit(), "#duringsave");

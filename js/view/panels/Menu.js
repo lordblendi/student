@@ -15,11 +15,11 @@ Menu.view = function (ctrl) {
             <p class="navbar-text">{ctrl.displayname}</p>
             <ul class="nav navbar-nav">
 
-                <button type="button" class="btn btn-default navbar-btn"
+                <button name="labormenubutton" type="button" class="btn btn-default navbar-btn"
                         onclick={ctrl.laborOnClick}>{resources.getResource("menu-button-laboratory")}</button>
-                <button type="button" class="btn btn-default navbar-btn"
+                <button name="resultsmenubutton" type="button" class="btn btn-default navbar-btn"
                         onclick={ctrl.resultsOnClick}>{resources.getResource("menu-button-results")}</button>
-                <button type="button" class="btn btn-default navbar-btn"
+                <button name="settingsmenubutton" type="button" class="btn btn-default navbar-btn"
                         onclick={ctrl.settingsOnClick}>{resources.getResource("menu-button-settings")}</button>
             </ul>
         </div>

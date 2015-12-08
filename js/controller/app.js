@@ -26,6 +26,8 @@ m.route(document.getElementById("mainpage"), '/', {
  */
 student.refreshGenerals();
 resources.getResources(student.refreshLaboratory(m.route(resources.urls.laboratory)));
+
+
 //
 //////bootstrap
 //$(function () {
