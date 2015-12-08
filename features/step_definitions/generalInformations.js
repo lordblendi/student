@@ -12,8 +12,12 @@ module.exports = function () {
         callback();
     });
 
-    this.Then(/^I should see the date: "([^"]*)"$/, function (date, callback) {
-        this.world.text('#laboratorydate', date, callback);
+    this.Then(/^I should see the date$/, function (callback) {
+        var date = this.world.browser.text('#laboratorydate');
+        if (date.match(/^(\d{4})\.(\d{2})\.(\d{2})\. (\d{2}):(\d{2})$/)) {
+            callback();
+        }
+        callback(new Error("Date not included in text field."));
     });
 
     this.Then(/^I should see the demonstrator's name: "([^"]*)"$/, function (name, callback) {

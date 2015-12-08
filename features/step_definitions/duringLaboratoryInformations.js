@@ -21,16 +21,13 @@ module.exports = function () {
 
     this.Then(/^I should see the remaining time till the deadline$/, function (callback) {
         var deadlinetext = this.world.browser.text('#duringdeadline');
-        var hours = parseInt(deadlinetext.split(" ")[0]);
-        if (isNaN(hours)) {
-            callback(new Error("Remaining hours are NaN"));
-        }
-        if (hours >= 0 && hours <= 96) {
+        var date = deadlinetext.split("(")[1].split(")")[0];
+
+        if (date.match(/^(\d{4})\.(\d{2})\.(\d{2})\. (\d{2}):(\d{2})$/)) {
             callback();
         }
-        else {
-            callback(new Error("Remaining hours are in wrong interval."));
-        }
+        callback(new Error("Date not included in text field."));
+
     });
 
     this.Then(/^I should see the repository URL: "([^"]*)"$/, function (url, callback) {
